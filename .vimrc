@@ -87,8 +87,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tjennings/git-grep-vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'mhinz/vim-grepper'
 call vundle#end()
 filetype plugin indent on
 let g:in_git = substitute(system('git rev-parse --show-toplevel2>/dev/null'), "\n*$", '', '')
@@ -142,8 +142,14 @@ nnoremap <F5> :setlocal invnumber<CR>:setlocal invlist<CR>
 nnoremap <F6> :vsp <CR> :ConqueTerm bash<CR>
 set pastetoggle=<F3>
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set cscopetag
 let g:ycm_autoclose_preview_window_after_completion = 1
 set splitbelow
+nmap gs  <plug>(GrepperOperator)
+xmap gs  <plug>(GrepperOperator)
+set grepprg=ag\ --nogroup\ --nocolor
