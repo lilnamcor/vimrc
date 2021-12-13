@@ -8,3 +8,15 @@ Copy the file and put it in ~/.vimrc for vim to use these settings, might need t
 `sudo curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
 
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+
+`brew install coreutils`
+
+`git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+`brew install zsh`
+
+`git clone git@github.com:ryanoasis/nerd-fonts.git`
