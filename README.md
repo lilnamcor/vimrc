@@ -5,6 +5,8 @@ Copy the file and put it in ~/.vimrc for vim to use these settings, might need t
 
 `mkdir -p  ~/.vim/autoload/`
 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
 `sudo curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
 
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
@@ -20,3 +22,5 @@ Copy the file and put it in ~/.vimrc for vim to use these settings, might need t
 `brew install zsh`
 
 `git clone git@github.com:ryanoasis/nerd-fonts.git`
+
+`git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
